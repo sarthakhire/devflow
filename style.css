@@ -39,7 +39,9 @@ body {
 
 .logo {
   color: var(--primary);
+  font-size: 1.05rem;
   font-weight: 700;
+  position: relative;
 }
 
 
@@ -63,6 +65,26 @@ nav a {
  
  border-radius: 8px;
  padding: 0.75rem 1rem;
+ transition: transform 0.2s ease, color 0.2s ease; 
+}
+
+nav a:hover{
+  transform: translateX(5px);
+  color: var(--text);
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.2s ease;
+}
+.logo:hover::after {
+  width: 100%;
 }
 
 main {
