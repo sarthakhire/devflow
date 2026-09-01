@@ -38,8 +38,15 @@ body {
   color: var(--text);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.welcome {
+  margin-bottom: 1rem;
 }
 
 .logo {
@@ -55,7 +62,6 @@ h1, h2, h3 {
 
 .username {
   font-weight: 450;
-  transition: font-weight 0.3s ease-in-out;
 }
 
 .sidebar {
@@ -88,6 +94,10 @@ nav a:hover {
   color: var(--text);
 }
 
+nav a.active {
+color:  var(--secondary);
+}
+
 main {
   grid-area: main;
   padding: 2rem;
@@ -104,19 +114,48 @@ img {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background-color: var(--surface);
+  display: grid;
+  gap: 6px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.stat-card strong {
+  color: var(--text);
+  
+}
+
+.stat-card:hover {
+  border-color: var(--secondary);
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .project-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
-  transition: border-color 0.3s linear;
+  transition: border-color 0.3s ease;
   padding: 1rem;
 }
 
@@ -155,8 +194,17 @@ ul {
   color: var(--primary);
   font-size: 0.85rem;
   font-weight: 450;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
-.github-link:hover{
+.github-link:hover {
   border-bottom: 1px solid var(--secondary);
 }
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
