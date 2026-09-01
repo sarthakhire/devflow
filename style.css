@@ -5,6 +5,7 @@
   --secondary: #7c7ff2;
   --text: #f0f0f5;
   --text-secondary: #a0a0c0;
+  --border: #303154;
 }
 
 * {
@@ -15,7 +16,7 @@
 
 body {
   background-color: var(--background);
-  color: var(--text);
+  color: var(--text-secondary);
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -32,65 +33,64 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 2rem; 
+  padding: 0.2rem 2rem;
   background-color: var(--surface);
-  
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  color: var(--text);
 }
 
 .logo {
   color: var(--primary);
   font-size: 1.05rem;
   font-weight: 700;
-  position: relative;
+  transition: transform 0.3s ease-out;
 }
 
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.username {
+  font-weight: 450;
+  transition: font-weight 0.3s ease-in-out;
+}
 
 .sidebar {
   grid-area: sidebar;
   padding: 1rem;
   background-color: var(--surface);
-  border-right: 1px solid var(--secondary); 
+  border-right: 1px solid var(--border);
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 nav a {
- color: var(--text-secondary);
- font-size: 1rem;
- font-weight: 500;
- 
- border-radius: 8px;
- padding: 0.75rem 1rem;
- transition: transform 0.2s ease, color 0.2s ease; 
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
-nav a:hover{
+nav a:hover {
   transform: translateX(5px);
   color: var(--text);
-}
-
-.logo::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: var(--secondary);
-  transition: width 0.2s ease;
-}
-.logo:hover::after {
-  width: 100%;
 }
 
 main {
   grid-area: main;
   padding: 2rem;
- 
 }
 
 a {
@@ -104,4 +104,59 @@ img {
 
 ul {
   list-style: none;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.3s linear;
+  padding: 1rem;
+}
+
+.project-card:hover {
+  border-color: var(--secondary);
+}
+
+.project-card img {
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.project-content {
+  color: var(--text-secondary);
+}
+.project-content h3 {
+  color: var(--text);
+}
+
+.project-stack {
+  display: flex;
+  gap: 1rem;
+  color: var(--text);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-stack span {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+}
+
+.github-link {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 450;
+}
+
+.github-link:hover{
+  border-bottom: 1px solid var(--secondary);
 }
