@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>DevFlow &mdash; Developer Productivity Dashboard</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">DEVFLOW</a>
+
+      <div class="profile">
+        <span class="username">Sarthak</span>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="projects.html">Projects</a>
+        <a href="learning.html">Learning</a>
+        <a href="goals.html">Goals</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </aside>
+    <main>
+      <section class="learning-progress">
+        <h2>Learning Progress</h2>
+
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>HTML</span>
+            <span>90%</span>
+          </div>
+          <progress id="html" value="90" max="100"></progress>
+        </div>
+
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>CSS</span>
+            <span>90%</span>
+          </div>
+          <progress id="css" value="90" max="100"></progress>
+        </div>
+
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>JavaScript</span>
+            <span>Next</span>
+          </div>
+          <progress id="javascript" value="0" max="100"></progress>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

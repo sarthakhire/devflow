@@ -1,2 +1,2 @@
 # devflow
-DevFlow — Developer Productivity Dashboard
+DevFlow — Developer Productivity Dashboard using HTML & CSS
