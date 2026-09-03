@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -11,9 +13,14 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>DevFlow &mdash; Developer Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>DevFlow | Learning</title>
   </head>
+
   <body>
+    <!-- Header -->
     <header class="header">
       <a href="index.html" class="logo">DEVFLOW</a>
 
@@ -22,42 +29,93 @@
       </div>
     </header>
 
+    <!-- Sidebar -->
     <aside class="sidebar">
       <nav>
-        <a href="index.html" class="active">Dashboard</a>
+        <a href="index.html">Dashboard</a>
         <a href="projects.html">Projects</a>
-        <a href="learning.html">Learning</a>
+        <a href="learning.html" class="active">Learning</a>
         <a href="goals.html">Goals</a>
         <a href="resources.html">Resources</a>
       </nav>
     </aside>
+
+    <!-- Main Content -->
     <main>
-      <section class="learning-progress">
-        <h2>Learning Progress</h2>
+      <section class="learning-page">
+        <h1>Learning</h1>
 
-        <div class="progress-item">
-          <div class="progress-label">
-            <span>HTML</span>
-            <span>90%</span>
-          </div>
-          <progress id="html" value="90" max="100"></progress>
-        </div>
+        <p>Technologies and topics I'm currently learning.</p>
 
-        <div class="progress-item">
-          <div class="progress-label">
-            <span>CSS</span>
-            <span>90%</span>
-          </div>
-          <progress id="css" value="90" max="100"></progress>
-        </div>
+        <!-- Web Development -->
+        <section class="learning-section">
+          <h2>Web Development</h2>
 
-        <div class="progress-item">
-          <div class="progress-label">
-            <span>JavaScript</span>
-            <span>Next</span>
+          <div class="learning-progress">
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+
+              <progress value="90" max="100"></progress>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>CSS</span>
+                <span>90%</span>
+              </div>
+
+              <progress value="90" max="100"></progress>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>JavaScript</span>
+                <span>0%</span>
+              </div>
+
+              <progress value="0" max="100"></progress>
+            </div>
           </div>
-          <progress id="javascript" value="0" max="100"></progress>
-        </div>
+        </section>
+
+        <!-- Programming -->
+        <section class="learning-section">
+          <h2>Programming</h2>
+
+          <div class="learning-progress">
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>C++</span>
+                <span>Basic</span>
+              </div>
+
+              <progress value="30" max="100"></progress>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>Python</span>
+                <span>Basic</span>
+              </div>
+
+              <progress value="30" max="100"></progress>
+            </div>
+          </div>
+        </section>
+
+        <!-- Next -->
+        <section class="learning-section">
+          <h2>Next</h2>
+
+          <ul class="learning-list">
+            <li>JavaScript</li>
+            <li>DOM Manipulation</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </section>
       </section>
     </main>
   </body>

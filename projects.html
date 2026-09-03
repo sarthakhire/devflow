@@ -1,82 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>DevFlow &mdash; Developer Productivity Dashboard</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>DevFlow | Projects</title>
+  </head>
+
+  <body>
+    <!-- Header -->
     <header class="header">
-        <a href="index.html" class="logo">DEVFLOW</a>
+      <a href="index.html" class="logo">DEVFLOW</a>
 
-        <div class="profile">
-            <span class="username">Sarthak</span>
-        </div>
+      <div class="profile">
+        <span class="username">Sarthak</span>
+      </div>
     </header>
 
+    <!-- Sidebar -->
     <aside class="sidebar">
-        <nav>
-            <a href="index.html">Dashboard</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="learning.html">Learning</a>
-            <a href="goals.html">Goals</a>
-            <a href="resources.html">Resources</a>
-        </nav>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="learning.html">Learning</a>
+        <a href="goals.html">Goals</a>
+        <a href="resources.html">Resources</a>
+      </nav>
     </aside>
 
+    <!-- Main Content -->
     <main>
-        <section class="projects">
-            <h1>Projects</h1>
+      <section class="projects">
+        <h1>Projects</h1>
 
-            <div class="project-grid">
-                <article class="project-card">
-                    <img src="images/gamehub.png" alt="Screenshot of the GameHub website" />
+        <p>
+          Projects I'm building while learning and improving my development
+          skills.
+        </p>
 
-                    <div class="project-content">
-                        <h3>GameHub</h3>
+        <div class="project-grid">
+          <!-- GameHub -->
+          <article class="project-card">
+            <img
+              src="images/gamehub.png"
+              alt="Screenshot of the GameHub website"
+            />
 
-                        <p>A HTML only game discovery and review website.</p>
+            <div class="project-content">
+              <h3>GameHub</h3>
 
-                        <div class="project-stack">
-                            <span>HTML</span>
-                        </div>
+              <p>A HTML-only game discovery and review website.</p>
 
-                        <a href="https://github.com/sarthakhire/web-dev-learning" target="_blank"
-                            rel="noopener noreferrer" class="github-link">
-                            GitHub &rarr;
-                        </a>
-                    </div>
-                </article>
+              <div class="project-stack">
+                <span>HTML</span>
+              </div>
 
-                <article class="project-card">
-                    <img src="images/portfolio.png" alt="Screenshot of Sarthak's personal portfolio website." />
+              <a
+                href="https://github.com/sarthakhire/web-dev-learning"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub &rarr;
+              </a>
+            </div>
+          </article>
 
-                    <div class="project-content">
-                        <h3>Personal Portfolio</h3>
+          <!-- Personal Portfolio -->
+          <article class="project-card">
+            <img
+              src="images/portfolio.png"
+              alt="Screenshot of Sarthak's personal portfolio website"
+            />
 
-                        <p>
-                            A personal portfolio website that I am building while learning
-                            web development.
-                        </p>
+            <div class="project-content">
+              <h3>Personal Portfolio</h3>
 
-                        <div class="project-stack">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
+              <p>
+                A personal portfolio website that I am building while learning
+                web development.
+              </p>
 
-                        <a href="https://github.com/sarthakhire/sarthak-portfolio" target="_blank"
-                            rel="noopener noreferrer" class="github-link">GitHub &rarr;</a>
+              <div class="project-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
 
-                    </div>
-                </article>
+              <a
+                href="https://github.com/sarthakhire/sarthak-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub &rarr;
+              </a>
+            </div>
+          </article>
 
-        </section>
+          <!-- DevFlow -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3>DevFlow</h3>
+
+              <p>
+                A developer productivity dashboard built to practice HTML and
+                CSS.
+              </p>
+
+              <div class="project-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+
+              <a
+                href="https://github.com/sarthakhire/devflow"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub &rarr;
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
-
-
-</body>
-
+  </body>
 </html>

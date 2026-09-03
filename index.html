@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -11,10 +13,15 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>DevFlow &mdash; Developer Productivity Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>DevFlow | Dashboard</title>
   </head>
 
   <body>
+    <!-- Header -->
     <header class="header">
       <a href="index.html" class="logo">DEVFLOW</a>
 
@@ -23,6 +30,7 @@
       </div>
     </header>
 
+    <!-- Sidebar -->
     <aside class="sidebar">
       <nav>
         <a href="index.html" class="active">Dashboard</a>
@@ -33,131 +41,144 @@
       </nav>
     </aside>
 
+    <!-- Main Content -->
     <main>
-      <section id="dashboard">
-        <header class="welcome">
-          <h1>Good Morning, Sarthak 👋</h1>
-          <p>Keep learning, keep building.</p>
-        </header>
+      <!-- Welcome -->
+      <section class="welcome">
+        <h1>Dashboard</h1>
 
-        <div class="stats">
-          <article class="stat-card">
-            <strong>15%</strong>
-            <span>Web Development Progress</span>
+        <p>Welcome back, Sarthak. Keep building and keep learning.</p>
+      </section>
+
+      <!-- Statistics -->
+      <section class="stats">
+        <article class="stat-card">
+          <strong>15%</strong>
+          <span>Web Development Progress</span>
+        </article>
+
+        <article class="stat-card">
+          <strong>3</strong>
+          <span>Projects</span>
+        </article>
+
+        <article class="stat-card">
+          <strong>0 / 100</strong>
+          <span>DSA Problems</span>
+        </article>
+      </section>
+
+      <!-- Current Projects -->
+      <section class="current-projects">
+        <h2>Current Projects</h2>
+
+        <div class="project-grid">
+          <!-- GameHub -->
+          <article class="project-card">
+            <img
+              src="images/gamehub.png"
+              alt="Screenshot of the GameHub website"
+            />
+
+            <div class="project-content">
+              <h3>GameHub</h3>
+
+              <p>A HTML-only game discovery and review website.</p>
+
+              <div class="project-stack">
+                <span>HTML</span>
+              </div>
+
+              <a
+                href="https://github.com/sarthakhire/web-dev-learning"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub &rarr;
+              </a>
+            </div>
           </article>
 
-          <article class="stat-card">
-            <strong>3</strong>
-            <span>Projects</span>
-          </article>
+          <!-- Portfolio -->
+          <article class="project-card">
+            <img
+              src="images/portfolio.png"
+              alt="Screenshot of Sarthak's personal portfolio website"
+            />
 
-          <article class="stat-card">
-            <strong>0 / 100</strong>
-            <span>DSA Problems</span>
+            <div class="project-content">
+              <h3>Personal Portfolio</h3>
+
+              <p>
+                A personal portfolio website that I am building while learning
+                web development.
+              </p>
+
+              <div class="project-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+
+              <a
+                href="https://github.com/sarthakhire/sarthak-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub &rarr;
+              </a>
+            </div>
           </article>
         </div>
+      </section>
 
-        <section class="current-projects">
-          <h2>Current Projects</h2>
+      <!-- Bottom Dashboard -->
+      <div class="dashboard-bottom">
+        <!-- Learning Progress -->
+        <section class="learning-progress">
+          <h2>Learning Progress</h2>
 
-          <div class="project-grid">
-            <article class="project-card">
-              <img
-                src="images/gamehub.png"
-                alt="Screenshot of the GameHub website"
-              />
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
 
-              <div class="project-content">
-                <h3>GameHub</h3>
+            <progress id="html" value="90" max="100"></progress>
+          </div>
 
-                <p>A HTML only game discovery and review website.</p>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>CSS</span>
+              <span>90%</span>
+            </div>
 
-                <div class="project-stack">
-                  <span>HTML</span>
-                </div>
+            <progress id="css" value="90" max="100"></progress>
+          </div>
 
-                <a
-                  href="https://github.com/sarthakhire/web-dev-learning"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="github-link"
-                >
-                  GitHub &rarr;
-                </a>
-              </div>
-            </article>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>JavaScript</span>
+              <span>Next</span>
+            </div>
 
-            <article class="project-card">
-              <img
-                src="images/portfolio.png"
-                alt="Screenshot of Sarthak's personal portfolio website."
-              />
-
-              <div class="project-content">
-                <h3>Personal Portfolio</h3>
-
-                <p>
-                  A personal portfolio website that I am building while learning
-                  web development.
-                </p>
-
-                <div class="project-stack">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                </div>
-
-                <a
-                  href="https://github.com/sarthakhire/sarthak-portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="github-link"
-                  >GitHub &rarr;</a
-                >
-              </div>
-            </article>
+            <progress id="javascript" value="0" max="100"></progress>
           </div>
         </section>
 
-        <div class="dashboard-bottom">
-          <section class="learning-progress">
-            <h2>Learning Progress</h2>
+        <!-- Recent Activity -->
+        <section class="activity">
+          <h2>Recent Activity</h2>
 
-            <div class="progress-item">
-              <div class="progress-label">
-                <span>HTML</span>
-                <span>90%</span>
-              </div>
-              <progress id="html" value="90" max="100"></progress>
-            </div>
-
-            <div class="progress-item">
-              <div class="progress-label">
-                <span>CSS</span>
-                <span>90%</span>
-              </div>
-              <progress id="css" value="90" max="100"></progress>
-            </div>
-
-            <div class="progress-item">
-              <div class="progress-label">
-                <span>JavaScript</span>
-                <span>Next</span>
-              </div>
-              <progress id="javascript" value="0" max="100"></progress>
-            </div>
-          </section>
-
-          <section class="activity">
-            <h2>Recent Activity</h2>
-            <ul>
-              <li>Started learning web development in public.</li>
-              <li>Completed HTML &amp; CSS.</li>
-              <li>Worked on portfolio.</li>
-              <li>Started DevFlow.</li>
-            </ul>
-          </section>
-        </div>
-      </section>
+          <ul>
+            <li>Started learning web development in public.</li>
+            <li>Completed HTML &amp; CSS.</li>
+            <li>Worked on portfolio.</li>
+            <li>Started DevFlow.</li>
+          </ul>
+        </section>
+      </div>
     </main>
   </body>
 </html>
